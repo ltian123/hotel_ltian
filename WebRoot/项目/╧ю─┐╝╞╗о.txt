@@ -1,0 +1,182 @@
+﻿------------------------------------------------------------------------------------------------
+创建表
+建工程
+	三层结构
+	使用struts1，mybatis
+	jsp放在WEB-INF下,css、js、图片放在webroot下
+
+写实体类（多人合作）
+
+考虑路径问题
+/member/showLogin.do
+/checked/member/findSubscription.do
+
+html改成jsp（多人合作，改扩展名，该字符编码，加指令）
+
+将头，菜单，子菜单，尾，单独写到一个jsp中
+其他页面include
+
+定义常量 constant包中Constant接口中
+	订单状态，取消、确定、未生效
+	房间状态，表示房间是否可用，状态为o(open)和c(close)
+	预定方式，单个床位预订值为1，整间预订值为2
+
+设施与价格(测试工程是否可以运行)
+注册
+登陆
+退出系统，注销										day01
+------------------------------------------------------------------------------------------------
+修改信息
+修改密码
+根据条件查询订单（客房预订，历史订单）
+新建订单
+联系人信息
+管理员登陆										day02
+------------------------------------------------------------------------------------------------
+管理员条件查询（做到时讲解）
+管理员操作										day03
+------------------------------------------------------------------------------------------------
+客房信息（订单明细的查询）
+新增预订（做到时讲解）									day04
+------------------------------------------------------------------------------------------------
+删除订单（做到时讲解）				
+用户订单号查询
+字符编码过滤器
+登陆检查过滤器
+	/checked/*									day05
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+客房预订
+	subscription_dtl	订单明细
+		每一个房间预订信息
+			预订了哪一个房间
+			开始时间
+			结束时间
+			预订方式
+
+	reside			居住信息
+		每一条明细中
+		每个房间每一天有没有人住
+
+订单
+	id	订单号
+	1	123132131
+
+
+明细
+	id	房间号  入住日期	退房日期	订单id
+	1	202	2015-12-12	2015-12-15	1
+	2	203	2015-12-12	2015-12-15	1
+
+居住信息
+	明细id	日期
+	1	2015-12-12
+	1	2015-12-13
+	1	2015-12-14
+	2	2015-12-12
+	2	2015-12-13
+	2	2015-12-14
+
+
+SubscriptionAction
+	第一个页面对应的方法
+		获得数据
+		保存在Session中
+		根据条件查询房间（调用方法 查询可用房间）
+
+
+	第二个页面对应的方法
+		获得请求数据
+		获得Session中的第一个页面中的数据
+		调用createSubscriptionDtl方法
+		释放Session
+	
+
+SubscriptionService
+	void createSubscriptionDtl(SubscriptionDtl dtl)
+		保存订单明细 返回id 调用SubscriptionDtlDao中的方法
+		按入住日期退房日期循环，每天循环一次
+			保存居住信息 调用ResideDao中的方法
+
+
+
+RoomService
+	查询可用房间
+		调用Roomdao
+
+
+整件预订     2
+单个床位预订 1
+
+房间可用   o
+房间不可用 c
+
+客房类型
+预定方式
+开始日期 sdate 2015-12-13
+结束日期 edate 2015-12-14
+
+
+
+
+
+
+
+
+
+
+单个床位
+   select
+        r.*  
+    from
+        room r  
+    where
+        r.cid=?     
+        and r.status=?     
+        and r.id not in(
+            select
+                m.roomid     
+            from
+                (         
+		select
+                    sum(dtl.residetype) cnt,
+                    dtl.rid roomid ,
+                    rsd.residedate         
+                from
+                    reside rsd          
+                inner join
+                    subscription_dtl dtl             
+                        on rsd.dtlid = dtl.id         
+                where
+                    rsd.residedate between ? and ?         
+                group by
+                    dtl.rid,
+                    rsd.residedate         
+                having
+                    cnt >=2) m )
+
+
+
+
+整件
+    select
+        r.*
+    from
+        room r 
+    where
+        r.cid=? 
+        and r.status=? 
+        and r.id not in  (
+                          select
+                               dtl.rid 
+                          from
+                               reside res,
+                               subscription_dtl dtl,
+                          where
+                               res.dtlid=dtl.id 
+                               and res.residedate between ? and ? )
+        
