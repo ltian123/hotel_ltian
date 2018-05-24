@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.SubscriptionDao">
+
+	<resultMap type="subscription" id="subscriptionMapper">
+		<id property="id" column="s.id"></id>
+		<result property="no" column="s.no" />
+		<result property="linkman" column="s.linkman" />
+		<result property="email" column="s.email" />
+		<result property="phone" column="s.phone" />
+		<result property="status" column="s.status" />
+		<result property="cretime" column="s.cretime" />
+		<result property="remark" column="s.remark" />
+	</resultMap>
+
+	<resultMap type="subscription" id="subscriptionMapper2">
+		<id property="id" column="id"></id>
+		<result property="no" column="no" />
+		<result property="linkman" column="linkman" />
+		<result property="email" column="email" />
+		<result property="phone" column="phone" />
+		<result property="status" column="status" />
+		<result property="cretime" column="cretime" />
+		<result property="remark" column="remark" />
+		<association property="member" javaType="Member">
+			<id property="id" column="mid" />
+		</association>
+	</resultMap>
+
+
+
+	<select id="selectAll" resultType="Subscription" parameterType="int">
+		select id,mid,no,linkman,email,phone,status,cretime,remark
+		from subscription
+		where mid=#{mid} and status=0
+		</select>
+	<select id="selectHistory" resultType="Subscription"
+		parameterType="int">
+		select
+		id,mid,no,linkman,email,phone,status,cretime,remark
+		from subscription
+		where mid=#{mid} and status!=0
+		</select>
+	<insert id="insertSubscription" parameterType="Subscription">
+		insert into
+		subscription
+		(mid,no,linkman,email,phone,status,cretime)
+		values(#{member.id},#{no},#{linkman},#{email},#{phone},#{status},#{cretime})
+	</insert>
+
+	<select id="selectById" parameterType="int" resultMap="subscriptionMapper2">
+		select id,mid,no,linkman,email,phone,status,cretime,remark
+		from subscription
+		where id=#{id}
+		</select>
+
+	<update id="updateById" parameterType="Subscription">
+		update subscription set linkman=#{linkman},email=#{email},phone=#{phone}
+		where id=#{id}
+		
+		</update>
+	<update id="updateStatusById" parameterType="Subscription">
+		update subscription set status=#{status}
+		where id=#{id}
+		
+		</update>
+	<delete id="delectById" parameterType="int">
+		delete from subscription
+		where id=#{id}
+		</delete>
+
+	<select id="selectByCriteria" parameterType="SubscriptionCriteria"
+		resultMap="subscriptionMapper">
+		select distinct
+		s.id,s.mid,s.no,s.linkman,s.email,s.phone,s.status,s.cretime,s.remark
+		from
+		subscription s
+		left join
+		subscription_dtl sd
+		on
+		sd.sid=s.id
+		left join
+		member m
+		on
+		m.id=s.mid
+		left join
+		room r
+		on
+		r.id=sd.rid
+		left join
+		category c
+		on
+		c.id=r.id
+		where
+		1=1
+		<if test="subscirptionStatus!='-1'">
+			and s.status=#{subscirptionStatus}
+			</if>
+		<if test="sdate!=null">
+			and sd.sdate&gt;=#{sdate}
+			</if>
+		<if test="edate!=null">
+			and sd.edate&lt;=#{edate}
+			</if>
+		<if test="subscriptionNo!=''">
+			and s.no =#{subscriptionNo}
+			</if>
+		<if test="username!=''">
+			and m.username=#{username}
+			</if>
+		<if test="categoryId!=0">
+			and c.id=#{categoryId}
+			</if>
+
+
+	</select>
+
+
+	<update id="updateRemarkAndStatus" parameterType="Subscription">
+		update subscription set remark=#{remark},status=#{status}
+		where id=#{id}
+		
+		
+		
+		</update>
+</mapper>

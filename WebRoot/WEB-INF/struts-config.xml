@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  
+  <form-beans >
+  	<!-- 定义一个ActionForm的变量名 type表示该form的路径名-->
+  	<form-bean name="memberForm" type="form.MemberForm"></form-bean>
+  	<form-bean name="subscriptionCriteriaForm" type="form.SubscriptionCriteriaForm"></form-bean>
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+  
+  	<action path="/show" forward="/WEB-INF/pages/register-1.jsp"></action>
+  	<!-- show首页-->
+  	<action path="/showIndex" forward="/WEB-INF/pages/index.jsp"></action>
+		<!-- show价格和设施-->
+	<action path="/room/roomPrice" type="action.RoomAction" parameter="findAllCategory">
+		<forward name="success" path="/WEB-INF/pages/roomPrice.jsp"></forward>
+	</action>
+	<!-- show登陆，注册界面-->
+	<action path="/showRegist" forward="/WEB-INF/pages/register-1.jsp"></action>
+  	<action path="/showLogin" forward="/WEB-INF/pages/login.jsp"></action>
+  	<action path="/checked/showRegister-2" forward="/WEB-INF/pages/register-2.jsp"></action>
+  	<!-- show会员修改信息-->
+  	<action path="/checked/member/showMember" type="action.MemberAction"  parameter="showMember">
+  	<forward name="success" path="/WEB-INF/pages/editMember.jsp" ></forward>
+  	<forward name="fail" path="/WEB-INF/pages/editMember.jsp"></forward>
+  	</action>
+  	<!-- show会员修改密码界面-->
+  	<action path="/checked/member/showPassword" forward="/WEB-INF/pages/editPassword.jsp"></action>
+  	<!-- show会员历史订单-->
+  	<action path="/checked/member/historySubscription"  type="action.SubscriptionAction"  parameter="historySubscription">
+  	<forward name="success" path="/WEB-INF/pages/historySubscription.jsp" ></forward>
+  	<forward name="fail" path="/WEB-INF/pages/historySubscription.jsp"></forward>
+  	
+  	</action>
+  	
+  	<!-- show会员客房预订和会员中心-->
+  	<action path="/checked/member/memberCenter" type="action.SubscriptionAction"  parameter="findAllSubscription">
+  	<forward name="success" path="/WEB-INF/pages/memberCenter.jsp" ></forward>
+  	<forward name="fail" path="/WEB-INF/pages/memberCenter.jsp"></forward>
+  	</action>
+  	<!-- 会员中心删除订单-->
+  	<action path="/checked/member/removeSubscription" type="action.SubscriptionAction"  parameter="removeSubscription">
+  	<forward name="success" path="/checked/member/memberCenter.do" redirect="true" ></forward>
+  	<forward name="fail" path="/WEB-INF/pages/memberCenter.jsp"></forward>
+  	</action>
+  	<!-- show订单联系人信息-->
+  	<action path="/checked/member/showEditSubscription" type="action.SubscriptionAction"  parameter="showEditSubscription">
+  	<forward name="success" path="/WEB-INF/pages/editSubscription.jsp"  ></forward>
+  	<forward name="fail" path="/WEB-INF/pages/editSubscription.jsp"></forward>
+  	</action>
+  	<!-- 修改订单联系人信息操作-->
+  	<action path="/checked/member/modifyEditSubscription" type="action.SubscriptionAction"  parameter="modifyEditSubscription">
+  	<forward name="success" path="/checked/member/memberCenter.do" redirect="true"  ></forward>
+  	<forward name="fail" path="/WEB-INF/pages/editSubscription.jsp"></forward>
+  	</action>
+  	<!-- 展示新增加订单页面-->
+  	<action path="/checked/member/showNewSubscription" forward="/WEB-INF/pages/newSubscription.jsp"></action>
+  	
+  	<!-- 新增加订单操作-->
+  	<action path="/checked/member/createNewSubscription" type="action.SubscriptionAction"  parameter="createNewSubscription">
+  	<forward name="success" path="/checked/member/memberCenter.do" redirect="true"  ></forward>
+  	<forward name="fail" path="/WEB-INF/pages/newSubscription.jsp"></forward>
+  	</action>
+  	<!-- 修改会员信息-->
+  	<action path="/checked/member/modifyMember" type="action.MemberAction"  parameter="modifyMember">
+  	<forward name="success" path="/checked/member/memberCenter.do" redirect="true"></forward>
+  	<forward name="fail" path="/WEB-INF/pages/editMember.jsp"></forward>
+  	</action>
+  	
+  	<!-- 登陆，注册action操作-->
+	<action path="/regist" type="action.MemberAction" name="memberForm" parameter="regist">
+  		<forward name="success" path="/checked/showRegister-2.do" redirect="true"></forward>
+  		<forward name="fail" path="/WEB-INF/pages/register-1.jsp"></forward>
+  	</action>
+  	 <action path="/login" type="action.MemberAction" parameter="login" input="/WEB-INF/pages/login.jsp">
+  	 <exception key="memberException" type="exception.ServiceException"></exception>
+  		<forward name="success" path="/checked/member/memberCenter.do" redirect="true" ></forward>
+  		<forward name="fail" path="/WEB-INF/pages/login.jsp"></forward>
+  	</action>
+  	<action path="/checked/logOut" type="action.MemberAction" parameter="logOut">
+  		<forward name="success" path="/WEB-INF/pages/index.jsp"></forward>
+  	</action>
+  	<!-- 修改密码操作-->
+  	<action path="/checked/member/modifyPassword" type="action.MemberAction" parameter="modifyPassword">
+  		<forward name="success" path="/WEB-INF/pages/index.jsp"></forward>
+  		<forward name="fail" path="/WEB-INF/pages/editPassword.jsp"></forward>
+  	</action>
+  	<!-- 展示订单明细-->
+  	<action path="/checked/member/showMemberSubscriptionDetail" type="action.SubscriptionDtlAction" parameter="showMemberSubscriptionDetail">
+  		<forward name="success" path="/WEB-INF/pages/subscriptionDetail.jsp"></forward>
+  	</action>
+  	<!-- 展示新增预定界面-->
+  	<action path="/checked/member/showCreateSubscriptionDtl-1" type="action.SubscriptionDtlAction" parameter="showCreateSubscriptionDtl1">
+  	<forward name="success" path="/WEB-INF/pages/createSubscriptionDtl-1.jsp"></forward>
+  	</action>
+  	<!-- 展示新增预定界面2-->
+  	<action path="/checked/member/showCreateSubscriptionDtl-2" type="action.RoomAction" parameter="findAvailableRoom">
+  	<forward name="success" path="/WEB-INF/pages/createSubscriptionDtl-2.jsp"></forward>
+  	<forward name="fail" path="/checked/member/showCreateSubscriptionDtl-1.do"></forward>
+  	</action>
+  	<!-- 重新退回展示新增预定界面-->
+  	<action path="/checked/member/reshowCreateSubscriptionDtl-1" forward="/checked/member/showCreateSubscriptionDtl-1.do">
+  	</action>
+  	<!-- 完成预定操作-->
+  	<action path="/checked/member/createSubscriptionDtl-3" type="action.SubscriptionDtlAction" parameter="createSubscriptionDtl3">
+  	<forward name="success" path="/checked/member/showCreateSubscriptionDtl-3.do" redirect="true"></forward>
+  	<forward name="fail" path="/checked/member/showCreateSubscriptionDtl-2.do"></forward>
+  	</action>
+  	<!-- 完成预定操作，为了保存重定向，跳转页面-->
+  	<action path="/checked/member/showCreateSubscriptionDtl-3" forward="/WEB-INF/pages/createSubscriptionDtl-3.jsp"></action>
+  	<!-- 订单明细删除 -->
+  	<action path="/checked/member/removeSubscriptionDtl" type="action.SubscriptionDtlAction"  parameter="removeMemberSubscriptionDtl">
+  		<forward name="success" path="/checked/member/showMemberSubscriptionDetail.do" ></forward>
+  		<forward name="fail" path="/checked/member/showMemberSubscriptionDetail.do" ></forward>
+  		</action>
+  		<!-- 用户中心，订单号进入订单明细 -->
+  	<action path="/checked/member/showCenterDetail" type="action.SubscriptionDtlAction"  parameter="showDetail">
+  		<forward name="success" path="/WEB-INF/pages/memberSubscriptionDetail.jsp" ></forward>
+  		<forward name="fail" path="/checked/member/memberCenter.do" ></forward>
+  		</action>
+  		<!-- 历史订单，订单号进入订单明细 -->
+  	<action path="/checked/member/showHistoryDetail" type="action.SubscriptionDtlAction"  parameter="showDetail">
+  		<forward name="success" path="/WEB-INF/pages/memberSubscriptionDetail.jsp" ></forward>
+  		<forward name="fail" path="/checked/member/historySubscription.do" ></forward>
+  		</action>
+  		<!-- 订单号进入订单明细，后返回页面 -->
+  	<action path="/checked/member/reback" type="action.MemberAction"  parameter="memberReback">
+		<forward name="path1" path="/checked/member/memberCenter.do" ></forward>
+		<forward name="path2" path="/checked/member/historySubscription.do" ></forward>
+	</action>
+	
+	
+	
+	
+	
+	<!-- manager界面 -->
+  	<!--  show  manager界面 -->
+  	<action path="/manager" forward="/WEB-INF/pages/manager/login.jsp"></action>
+  	<!-- manager登陆操作 -->
+  	<action path="/manager/login" type="action.ManagerAction" parameter="login" input="/WEB-INF/pages/manager/login.jsp">
+  	<exception key="managerException" type="exception.ServiceException"></exception>
+  		<forward name="success" path="/checked/manager/showSubscriptionQuery.do" redirect="true" ></forward>
+  		<forward name="fail" path="/WEB-INF/pages/manager/login.jsp"></forward>
+  	</action>
+  	<!-- 注销登录 -->
+  	<action path="/checked/manager/logout" type="action.ManagerAction" parameter="logout">
+  		<forward name="success" path="/manager.do" redirect="true" ></forward>
+  	</action>
+  	<!--展示 登陆成功后的查询页面 -->
+  	
+  	<action path="/checked/manager/showSubscriptionQuery" type="action.ManagerAction" parameter="showSubcriptionQuery">
+  		<forward name="success" path="/WEB-INF/pages/manager/subscriptionQuery.jsp"  ></forward>
+  		</action>
+  		<!--管理员条件查询 -->
+  		<action path="/checked/manager/querySubscriptionList" type="action.SubscriptionAction" parameter="querySubscriptionList" name="subscriptionCriteriaForm">
+  		<forward name="success" path="/WEB-INF/pages/manager/subscriptionList.jsp"  ></forward>
+  		</action>
+  		<!--管理员订单删除 -->
+  		<action path="/checked/manager/removeSubscription" type="action.SubscriptionAction"  parameter="removeSubscription">
+  		<forward name="success" path="/checked/manager/querySubscriptionList.do" ></forward>
+  		</action>
+  		<!--管理员订单明细 -->
+  		<action path="/checked/manager/showSubscriptionDetail" type="action.SubscriptionDtlAction"  parameter="showSubscriptionDetail">
+  		<forward name="success" path="/WEB-INF/pages/manager/subscriptionDetail.jsp" ></forward>
+  		</action>
+  		<!-- 管理员修改订单备注和订单状态 -->
+  		<action path="/checked/manager/saveRemarkAndStatus" type="action.SubscriptionAction"  parameter="modifyRemarkAndStatus">
+  		<forward name="success" path="/checked/manager/querySubscriptionList.do" ></forward>
+  		<forward name="fail" path="/checked/manager/querySubscriptionList.do" ></forward>
+  		</action>
+  		<!--管理员订单明细删除 -->
+  		<action path="/checked/manager/removeSubscriptionDtl" type="action.SubscriptionDtlAction"  parameter="removeSubscriptionDtl">
+  		<forward name="success" path="/checked/manager/showSubscriptionDetail.do" ></forward>
+  		<forward name="fail" path="/checked/manager/showSubscriptionDetail.do" ></forward>
+  		</action>
+  		
+  		
+  		
+  </action-mappings>
+  <message-resources parameter="struts.ApplicationResources" />
+</struts-config>
+

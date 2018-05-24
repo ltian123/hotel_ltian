@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="hotel_tianliang"
+  id="myeclipse.1478058859325"
+  context-root="/hotel_tianliang"
+  j2ee-spec="5.0"
+  archive="hotel_tianliang.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

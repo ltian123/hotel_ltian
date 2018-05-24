@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.RoomDao">
+
+
+	<resultMap type="Room" id="roommapper">
+		<id column="id" property="id" />
+		<result column="no" property="no" />
+		<result column="status" property="status" />
+		<association property="category" javaType="Category">
+			<id property="id" column="cid" />
+		</association>
+	</resultMap>
+
+	<resultMap type="Room" id="roommapper2">
+		<id property="id" column="r.id" />
+		<result property="no" column="r.no" />
+		<result property="status" column="r.status" />
+		<association property="category" javaType="Category">
+			<id property="id" column="r.cid" />
+		</association>
+	</resultMap>
+
+
+
+
+	<select id="selectAvailableRoom" parameterType="RoomCriteria"
+		resultType="Room">
+		select
+		r.id,r.cid,r.no,r.status
+		from
+		room r
+		left join
+		category cate
+		on
+		r.cid=cate.id
+		<where>
+			1=1
+			<if test="categoryId != 0">
+				and cate.id=#{categoryId}
+	  	</if>
+			<if test="residetype == 1">
+				and r.id not in
+				(
+				select
+				room.id
+				from
+				room
+				left join
+				subscription_dtl sudtl
+				on
+				sudtl.rid=room.id
+				<where>
+					sudtl.residetype=1
+					<if test="sdate != null">
+						and sudtl.sdate&gt;=#{sdate }
+				</if>
+					<if test="edate != null">
+						and sudtl.edate&lt;=#{edate }
+				</if>
+				</where>
+				group by
+				room.id
+				having
+				count(1)=2
+				)
+			</if>
+			and r.id
+			not in
+			( select
+			ro.id
+			from
+			room ro
+			left join
+			subscription_dtl sdtl
+			on
+			sdtl.rid=ro.id
+			<where>
+				sdtl.residetype=2
+				<if test="sdate != null">
+					and sdtl.sdate&gt;=#{sdate }
+			</if>
+				<if test="edate != null">
+					and sdtl.edate&lt;=#{edate }
+			</if>
+			</where>
+			)
+			order by
+			r.no
+		</where>
+
+
+	</select>
+
+
+	<select id="selectById" parameterType="int" resultMap="roommapper">
+		select id,cid,no,status
+		from room
+		where id=#{id}
+	
+	</select>
+
+	<select id="selectAvailableSingleRoom" parameterType="RoomCriteria"
+		resultType="Room">
+		select
+		r.id,r.cid,r.no,r.status
+		from
+		room r
+		where
+		r.cid=#{categoryId}
+		and r.status=#{roomStatus}
+		and r.id not in(
+		select
+		m.roomid
+		from
+		(
+		select
+		sum(dtl.residetype),
+		dtl.rid roomid ,
+		rsd.residedate
+		from
+		reside rsd
+		inner join
+		subscription_dtl dtl
+		on rsd.dtlid = dtl.id
+		where
+		rsd.residedate between #{sdate } and #{edate }
+		group by
+		dtl.rid,
+		rsd.residedate
+		having
+		sum(dtl.residetype)>=2) m )
+	</select>
+
+
+	<select id="selectAvailableWholeRoom" parameterType="RoomCriteria"
+		resultType="Room">
+		select
+		r.id,r.cid,r.no,r.status
+		from
+		room r
+		where
+		r.cid=#{categoryId}
+		and r.status=#{roomStatus}
+		and r.id not in (
+		select
+		dtl.rid
+		from
+		reside res,
+		subscription_dtl dtl
+		where
+		res.dtlid=dtl.id
+		and res.residedate between #{sdate } and #{edate } )
+	</select>
+
+</mapper>

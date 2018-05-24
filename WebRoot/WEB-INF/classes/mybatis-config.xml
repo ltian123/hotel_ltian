@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	
+	<!-- 配置properties文件的位置 -->
+	<properties resource="database.properties"></properties>
+	
+	<!-- 取别名 -->
+	<typeAliases>
+		<package name="entity"/>
+		<package name="vo"/>
+	</typeAliases>
+	<!-- 配置连接信息 -->
+	<environments default="mybatis">
+		<environment id="mybatis">
+			<transactionManager type="JDBC"></transactionManager>
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}"/>
+				<property name="url" value="${url}"/>
+				<property name="username" value="${username}"/>
+				<property name="password" value="${password}"/>
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<mapper resource="mapper/CategoryMapper.xml"/>
+		<mapper resource="mapper/MemberMapper.xml"/>
+		<mapper resource="mapper/SubscriptionMapper.xml"/>
+		<mapper resource="mapper/ManagerMapper.xml"/>
+		<mapper resource="mapper/SubscriptionDtlMapper.xml"/>
+		<mapper resource="mapper/SubscriptionDtlVoMapper.xml"/>
+		<mapper resource="mapper/RoomMapper.xml"/>
+		<mapper resource="mapper/ResideMapper.xml"/>
+	</mappers>
+
+
+</configuration>

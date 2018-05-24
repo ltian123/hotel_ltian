@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/show.do" location="50,650" dimension="89,76" />
+  <StrutsActivity path="/showIndex.do" location="650,250" dimension="126,76" />
+  <StrutsActivity path="/room/roomPrice.do" location="950,250" dimension="177,116" />
+  <StrutsActivity path="/showRegist.do" location="350,850" dimension="114,70" />
+  <StrutsActivity path="/showLogin.do" location="650,850" dimension="110,70" />
+  <StrutsActivity path="/checked/showRegister-2.do" location="1250,250" dimension="218,76" />
+  <StrutsActivity path="/checked/member/showMember.do" location="1250,450" dimension="269,76" />
+  <StrutsActivity path="/checked/member/showPassword.do" location="1250,1050" dimension="278,76" />
+  <StrutsActivity path="/checked/member/historySubscription.do" location="350,1450" dimension="309,76" />
+  <StrutsActivity path="/checked/member/memberCenter.do" location="50,1250" dimension="279,76" />
+  <StrutsActivity path="/checked/member/removeSubscription.do" location="50,1650" dimension="313,116" />
+  <StrutsActivity path="/checked/member/showEditSubscription.do" location="950,1650" dimension="324,116" />
+  <StrutsActivity path="/checked/member/modifyEditSubscription.do" location="1550,1450" dimension="337,116" />
+  <StrutsActivity path="/checked/member/showNewSubscription.do" location="1550,1650" dimension="327,76" />
+  <StrutsActivity path="/checked/member/createNewSubscription.do" location="1550,250" dimension="289,104" />
+  <StrutsActivity path="/checked/member/modifyMember.do" location="1250,850" dimension="282,116" />
+  <StrutsActivity path="/regist.do" location="950,650" dimension="166,104" />
+  <StrutsActivity path="/login.do" location="950,850" dimension="143,104" />
+  <StrutsActivity path="/checked/logOut.do" location="650,1650" dimension="194,116" />
+  <StrutsActivity path="/checked/member/modifyPassword.do" location="1250,1250" dimension="291,116" />
+  <StrutsActivity path="/checked/member/showMemberSubscriptionDetail.do" location="1250,2250" dimension="340,104" />
+  <StrutsActivity path="/checked/member/showCreateSubscriptionDtl-1.do" location="50,2450" dimension="323,70" />
+  <StrutsActivity path="/checked/member/showCreateSubscriptionDtl-2.do" location="1850,450" dimension="323,104" />
+  <StrutsActivity path="/checked/member/reshowCreateSubscriptionDtl-1.do" location="650,2450" dimension="335,104" />
+  <StrutsActivity path="/checked/member/createSubscriptionDtl-3.do" location="1250,2450" dimension="291,104" />
+  <StrutsActivity path="/checked/member/showCreateSubscriptionDtl-3.do" location="650,2650" dimension="374,76" />
+  <StrutsActivity path="/checked/member/removeSubscriptionDtl.do" location="1850,2450" dimension="287,104" />
+  <StrutsActivity path="/checked/member/showCenterDetail.do" location="2150,1450" dimension="297,116" />
+  <StrutsActivity path="/checked/member/showHistoryDetail.do" location="2150,1650" dimension="301,116" />
+  <StrutsActivity path="/checked/member/reback.do" location="1250,2650" dimension="223,116" />
+  <StrutsActivity path="/manager.do" location="650,1050" dimension="100,70" />
+  <StrutsActivity path="/manager/login.do" location="650,2050" dimension="196,116" />
+  <StrutsActivity path="/checked/manager/logout.do" location="950,2050" dimension="223,116" />
+  <StrutsActivity path="/checked/manager/showSubscriptionQuery.do" location="1550,1850" dimension="295,70" />
+  <StrutsActivity path="/checked/manager/querySubscriptionList.do" location="50,2250" dimension="327,116" />
+  <StrutsActivity path="/checked/manager/removeSubscription.do" location="1850,650" dimension="315,116" />
+  <StrutsActivity path="/checked/manager/showSubscriptionDetail.do" location="1850,850" dimension="339,116" />
+  <StrutsActivity path="/checked/manager/saveRemarkAndStatus.do" location="1850,1250" dimension="287,104" />
+  <StrutsActivity path="/checked/manager/removeSubscriptionDtl.do" location="1850,2050" dimension="290,104" />
+  <StrutsActivity path="/WEB-INF/pages/register-1.jsp" location="650,650" dimension="239,56" />
+  <StrutsActivity path="/WEB-INF/pages/index.jsp" location="650,450" dimension="211,56" />
+  <StrutsActivity path="/WEB-INF/pages/roomPrice.jsp" location="950,450" dimension="245,56" />
+  <StrutsActivity path="/WEB-INF/pages/login.jsp" location="50,1050" dimension="184,53" />
+  <StrutsActivity path="/WEB-INF/pages/register-2.jsp" location="50,1450" dimension="239,56" />
+  <StrutsActivity path="/WEB-INF/pages/editMember.jsp" location="1250,650" dimension="257,56" />
+  <StrutsActivity path="/WEB-INF/pages/editPassword.jsp" location="650,1250" dimension="267,56" />
+  <StrutsActivity path="/WEB-INF/pages/historySubscription.jsp" location="950,1450" dimension="306,56" />
+  <StrutsActivity path="/WEB-INF/pages/memberCenter.jsp" location="350,1050" dimension="242,53" />
+  <StrutsActivity path="/WEB-INF/pages/editSubscription.jsp" location="50,1850" dimension="286,56" />
+  <StrutsActivity path="/WEB-INF/pages/newSubscription.jsp" location="650,1850" dimension="286,56" />
+  <StrutsActivity path="/WEB-INF/pages/subscriptionDetail.jsp" location="1850,2250" dimension="259,53" />
+  <StrutsActivity path="/WEB-INF/pages/createSubscriptionDtl-1.jsp" location="350,50" dimension="334,56" />
+  <StrutsActivity path="/WEB-INF/pages/createSubscriptionDtl-2.jsp" location="950,50" dimension="334,56" />
+  <StrutsActivity path="/WEB-INF/pages/createSubscriptionDtl-3.jsp" location="50,250" dimension="334,56" />
+  <StrutsActivity path="/WEB-INF/pages/memberSubscriptionDetail.jsp" location="50,2650" dimension="356,56" />
+  <StrutsActivity path="/WEB-INF/pages/manager/login.jsp" location="1250,1850" dimension="241,53" />
+  <StrutsActivity path="/WEB-INF/pages/manager/subscriptionQuery.jsp" location="50,2050" dimension="318,53" />
+  <StrutsActivity path="/WEB-INF/pages/manager/subscriptionList.jsp" location="650,2250" dimension="347,56" />
+  <StrutsActivity path="/WEB-INF/pages/manager/subscriptionDetail.jsp" location="1850,1050" dimension="362,56" />
+  <StrutsActivity path="/WEB-INF/pages/regist.jsp" location="50,850" dimension="188,53" />
+  <StrutsActivity path="/WEB-INF/jsp/index.jsp" location="50,450" dimension="191,56" />
+  <StrutsActivity path="/WEB-INF/jsp/roomPrice.jsp" location="350,450" dimension="225,56" />
+  <StrutsActivity path="/WEB-INF/pages/register_1.jsp" location="350,650" dimension="242,56" />
+  <StrutsActivity path="/WEB-INF/pages/regist-1.jsp" location="950,1050" dimension="224,56" />
+  <StrutsActivity path="/manager/subscriptionQuery.jsp" location="1250,2050" dimension="253,56" />
+  <StrutsActivity path="/checked/member/historySubscription" location="2150,1850" dimension="296,56" />
+  <StrutsActivity path="/checked/member/showCreateSubscriptionDtl-3" location="1550,2650" dimension="361,56" />
+  <StrutsTransition id="/manager/login.do,fail,/WEB-INF/pages/manager/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="748,2050" />
+      <AbsolutePoint location="748,1935" />
+      <AbsolutePoint location="1370,1935" />
+      <AbsolutePoint location="1370,1903" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/createSubscriptionDtl-3.do,success,/checked/member/showCreateSubscriptionDtl-3.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1395,2502" />
+      <AbsolutePoint location="837,2688" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showLogin.do,null,/WEB-INF/pages/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="705,920" />
+      <AbsolutePoint location="705,1011" />
+      <AbsolutePoint location="172,1011" />
+      <AbsolutePoint location="172,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,success,/checked/member/memberCenter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1021,954" />
+      <AbsolutePoint location="1021,981" />
+      <AbsolutePoint location="286,981" />
+      <AbsolutePoint location="286,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/modifyEditSubscription.do,fail,/WEB-INF/pages/editSubscription.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,1551" />
+      <AbsolutePoint location="541,1551" />
+      <AbsolutePoint location="541,1878" />
+      <AbsolutePoint location="336,1878" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/regist.do,success,/checked/showRegister-2.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1116,691" />
+      <AbsolutePoint location="1210,691" />
+      <AbsolutePoint location="1210,288" />
+      <AbsolutePoint location="1250,288" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/removeSubscriptionDtl.do,success,/checked/member/showMemberSubscriptionDetail.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2023,2450" />
+      <AbsolutePoint location="2023,2318" />
+      <AbsolutePoint location="1590,2318" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showEditSubscription.do,fail,/WEB-INF/pages/editSubscription.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1112,1766" />
+      <AbsolutePoint location="1112,1995" />
+      <AbsolutePoint location="193,1995" />
+      <AbsolutePoint location="193,1906" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/show.do,null,/WEB-INF/pages/register-1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="139,721" />
+      <AbsolutePoint location="745,721" />
+      <AbsolutePoint location="745,706" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showHistoryDetail.do,fail,/checked/member/historySubscription.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2328,1650" />
+      <AbsolutePoint location="2328,1581" />
+      <AbsolutePoint location="504,1581" />
+      <AbsolutePoint location="504,1526" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/createNewSubscription.do,fail,/WEB-INF/pages/newSubscription.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1688,354" />
+      <AbsolutePoint location="1688,599" />
+      <AbsolutePoint location="932,599" />
+      <AbsolutePoint location="932,1850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/room/roomPrice.do,success,/WEB-INF/pages/roomPrice.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1072,366" />
+      <AbsolutePoint location="1072,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/manager/saveRemarkAndStatus.do,fail,/checked/manager/querySubscriptionList.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1993,1354" />
+      <AbsolutePoint location="1993,1811" />
+      <AbsolutePoint location="1218,1811" />
+      <AbsolutePoint location="1218,2321" />
+      <AbsolutePoint location="377,2321" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/memberCenter.do,success,/WEB-INF/pages/memberCenter.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="329,1288" />
+      <AbsolutePoint location="471,1288" />
+      <AbsolutePoint location="471,1103" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showCenterDetail.do,fail,/checked/member/memberCenter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2298,1450" />
+      <AbsolutePoint location="2298,1381" />
+      <AbsolutePoint location="189,1381" />
+      <AbsolutePoint location="189,1326" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showIndex.do,null,/WEB-INF/pages/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="755,326" />
+      <AbsolutePoint location="755,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/manager/removeSubscriptionDtl.do,success,/checked/manager/showSubscriptionDetail.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2023,2050" />
+      <AbsolutePoint location="2023,1411" />
+      <AbsolutePoint location="2388,1411" />
+      <AbsolutePoint location="2388,938" />
+      <AbsolutePoint location="2189,938" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showCreateSubscriptionDtl-2.do,fail,/checked/member/showCreateSubscriptionDtl-1.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,541" />
+      <AbsolutePoint location="-45,541" />
+      <AbsolutePoint location="-45,2515" />
+      <AbsolutePoint location="50,2515" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showEditSubscription.do,success,/WEB-INF/pages/editSubscription.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1061,1766" />
+      <AbsolutePoint location="1061,1811" />
+      <AbsolutePoint location="193,1811" />
+      <AbsolutePoint location="193,1850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/historySubscription.do,fail,/WEB-INF/pages/historySubscription.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="659,1478" />
+      <AbsolutePoint location="950,1478" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/removeSubscription.do,success,/checked/member/memberCenter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1708" />
+      <AbsolutePoint location="-75,1708" />
+      <AbsolutePoint location="-75,1288" />
+      <AbsolutePoint location="50,1288" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/logOut.do,success,/WEB-INF/pages/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="747,1650" />
+      <AbsolutePoint location="747,1351" />
+      <AbsolutePoint location="607,1351" />
+      <AbsolutePoint location="607,478" />
+      <AbsolutePoint location="650,478" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showMemberSubscriptionDetail.do,success,/WEB-INF/pages/subscriptionDetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1590,2276" />
+      <AbsolutePoint location="1850,2276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/modifyMember.do,success,/checked/member/memberCenter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,908" />
+      <AbsolutePoint location="1210,908" />
+      <AbsolutePoint location="1210,1321" />
+      <AbsolutePoint location="329,1321" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showHistoryDetail.do,success,/WEB-INF/pages/memberSubscriptionDetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2451,1708" />
+      <AbsolutePoint location="2676,1708" />
+      <AbsolutePoint location="2676,2841" />
+      <AbsolutePoint location="228,2841" />
+      <AbsolutePoint location="228,2706" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showPassword.do,null,/WEB-INF/pages/editPassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1389,1126" />
+      <AbsolutePoint location="1389,1201" />
+      <AbsolutePoint location="775,1201" />
+      <AbsolutePoint location="775,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/reback.do,path1,/checked/member/memberCenter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,2751" />
+      <AbsolutePoint location="0,2751" />
+      <AbsolutePoint location="0,1318" />
+      <AbsolutePoint location="50,1318" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/showRegister-2.do,null,/WEB-INF/pages/register-2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/createSubscriptionDtl-3.do,fail,/checked/member/showCreateSubscriptionDtl-2.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1395,2450" />
+      <AbsolutePoint location="1395,2411" />
+      <AbsolutePoint location="2526,2411" />
+      <AbsolutePoint location="2526,502" />
+      <AbsolutePoint location="2173,502" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manager.do,null,/WEB-INF/pages/manager/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="700,1120" />
+      <AbsolutePoint location="700,1171" />
+      <AbsolutePoint location="1055,1171" />
+      <AbsolutePoint location="1055,1411" />
+      <AbsolutePoint location="1370,1411" />
+      <AbsolutePoint location="1370,1850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showMember.do,fail,/WEB-INF/pages/editMember.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1378,526" />
+      <AbsolutePoint location="1378,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/manager/removeSubscriptionDtl.do,fail,/checked/manager/showSubscriptionDetail.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2140,2102" />
+      <AbsolutePoint location="2586,2102" />
+      <AbsolutePoint location="2586,908" />
+      <AbsolutePoint location="2189,908" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/modifyPassword.do,success,/WEB-INF/pages/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1541,1308" />
+      <AbsolutePoint location="1625,1308" />
+      <AbsolutePoint location="1625,629" />
+      <AbsolutePoint location="755,629" />
+      <AbsolutePoint location="755,506" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/modifyMember.do,fail,/WEB-INF/pages/editMember.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1378,850" />
+      <AbsolutePoint location="1378,706" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/manager/logout.do,success,/manager.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1061,2050" />
+      <AbsolutePoint location="1061,2025" />
+      <AbsolutePoint location="-105,2025" />
+      <AbsolutePoint location="-105,1201" />
+      <AbsolutePoint location="730,1201" />
+      <AbsolutePoint location="730,1120" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manager/login.do,success,/checked/manager/showSubscriptionQuery.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="748,2166" />
+      <AbsolutePoint location="748,2211" />
+      <AbsolutePoint location="1713,2211" />
+      <AbsolutePoint location="1713,1920" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/manager/showSubscriptionDetail.do,success,/WEB-INF/pages/manager/subscriptionDetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2031,966" />
+      <AbsolutePoint location="2031,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showCreateSubscriptionDtl-1.do,success,/WEB-INF/pages/createSubscriptionDtl-1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,2485" />
+      <AbsolutePoint location="-135,2485" />
+      <AbsolutePoint location="-135,78" />
+      <AbsolutePoint location="350,78" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showMember.do,success,/WEB-INF/pages/editMember.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1408,526" />
+      <AbsolutePoint location="1408,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showRegist.do,null,/WEB-INF/pages/register-1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="407,850" />
+      <AbsolutePoint location="407,811" />
+      <AbsolutePoint location="775,811" />
+      <AbsolutePoint location="775,706" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/reback.do,path2,/checked/member/historySubscription.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1361,2650" />
+      <AbsolutePoint location="1361,2599" />
+      <AbsolutePoint location="474,2599" />
+      <AbsolutePoint location="474,1526" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/manager/removeSubscription.do,success,/checked/manager/querySubscriptionList.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2165,708" />
+      <AbsolutePoint location="2556,708" />
+      <AbsolutePoint location="2556,2381" />
+      <AbsolutePoint location="213,2381" />
+      <AbsolutePoint location="213,2366" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/createNewSubscription.do,success,/checked/member/memberCenter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1625,354" />
+      <AbsolutePoint location="1625,411" />
+      <AbsolutePoint location="256,411" />
+      <AbsolutePoint location="256,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/reshowCreateSubscriptionDtl-1.do,null,/checked/member/showCreateSubscriptionDtl-1.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,2485" />
+      <AbsolutePoint location="373,2485" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/manager/saveRemarkAndStatus.do,success,/checked/manager/querySubscriptionList.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2137,1302" />
+      <AbsolutePoint location="2496,1302" />
+      <AbsolutePoint location="2496,2181" />
+      <AbsolutePoint location="213,2181" />
+      <AbsolutePoint location="213,2250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/WEB-INF/pages/manager/login.jsp,null,/manager/login.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1876" />
+      <AbsolutePoint location="1188,1876" />
+      <AbsolutePoint location="1188,2931" />
+      <AbsolutePoint location="601,2931" />
+      <AbsolutePoint location="601,2118" />
+      <AbsolutePoint location="650,2118" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/removeSubscriptionDtl.do,fail,/checked/member/showMemberSubscriptionDetail.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1993,2450" />
+      <AbsolutePoint location="1993,2348" />
+      <AbsolutePoint location="1590,2348" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,fail,/WEB-INF/pages/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,935" />
+      <AbsolutePoint location="142,935" />
+      <AbsolutePoint location="142,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/modifyPassword.do,fail,/WEB-INF/pages/editPassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1278" />
+      <AbsolutePoint location="917,1278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showCenterDetail.do,success,/WEB-INF/pages/memberSubscriptionDetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2298,1566" />
+      <AbsolutePoint location="2298,1611" />
+      <AbsolutePoint location="392,1611" />
+      <AbsolutePoint location="392,2650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/manager/querySubscriptionList.do,success,/WEB-INF/pages/manager/subscriptionList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="377,2278" />
+      <AbsolutePoint location="650,2278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/manager/showSubscriptionQuery.do,success,/WEB-INF/pages/manager/subscriptionQuery.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1683,1920" />
+      <AbsolutePoint location="1683,1965" />
+      <AbsolutePoint location="223,1965" />
+      <AbsolutePoint location="223,2050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showCreateSubscriptionDtl-3.do,null,/WEB-INF/pages/createSubscriptionDtl-3.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,2721" />
+      <AbsolutePoint location="-210,2721" />
+      <AbsolutePoint location="-210,278" />
+      <AbsolutePoint location="50,278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/modifyEditSubscription.do,success,/checked/member/memberCenter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1718,1450" />
+      <AbsolutePoint location="1718,1141" />
+      <AbsolutePoint location="189,1141" />
+      <AbsolutePoint location="189,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showCreateSubscriptionDtl-2.do,success,/WEB-INF/pages/createSubscriptionDtl-2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2011,450" />
+      <AbsolutePoint location="2011,78" />
+      <AbsolutePoint location="1284,78" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/historySubscription.do,success,/WEB-INF/pages/historySubscription.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="659,1521" />
+      <AbsolutePoint location="1103,1521" />
+      <AbsolutePoint location="1103,1506" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/regist.do,fail,/WEB-INF/pages/register-1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,678" />
+      <AbsolutePoint location="889,678" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/memberCenter.do,fail,/WEB-INF/pages/memberCenter.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="329,1258" />
+      <AbsolutePoint location="441,1258" />
+      <AbsolutePoint location="441,1103" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/showNewSubscription.do,null,/WEB-INF/pages/newSubscription.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1713,1726" />
+      <AbsolutePoint location="1713,1781" />
+      <AbsolutePoint location="793,1781" />
+      <AbsolutePoint location="793,1850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/WEB-INF/pages/login.jsp,null,/login.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="234,1076" />
+      <AbsolutePoint location="316,1076" />
+      <AbsolutePoint location="316,781" />
+      <AbsolutePoint location="1021,781" />
+      <AbsolutePoint location="1021,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/checked/member/removeSubscription.do,fail,/WEB-INF/pages/memberCenter.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="304,1650" />
+      <AbsolutePoint location="304,1411" />
+      <AbsolutePoint location="501,1411" />
+      <AbsolutePoint location="501,1103" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
